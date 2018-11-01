@@ -1,0 +1,14 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /shop-oenb
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.1.135/shop?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.jdbc.Driver
