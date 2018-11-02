@@ -10,12 +10,12 @@
 	<!--必要样式-->
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/html5.js"></script>
-	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
-	<script type="text/javascript" src="easyui/jquery.min.js"></script>
-	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="easyui/util-js.js"></script>
-	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/icon.css">
+	<script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/easyui/util-js.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/easyui/locale/easyui-lang-zh_CN.js"></script>
 	<!--[if IE]>
 	<![endif]-->
 </head>

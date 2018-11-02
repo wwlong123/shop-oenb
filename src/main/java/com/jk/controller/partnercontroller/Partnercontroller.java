@@ -26,8 +26,6 @@ public class Partnercontroller {
     @RequestMapping("/addpartner")
     @ResponseBody
     public void addpartner(Partner str){
-        str.setParname("hujianwei");
-        str.setParcompany("12312");
         partnerservice.addpartner(str);
     }
 }

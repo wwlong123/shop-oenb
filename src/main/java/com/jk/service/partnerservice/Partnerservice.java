@@ -9,4 +9,6 @@ public interface Partnerservice {
     List<Partner> selectpartner();
 
     void addpartner(Partner str);
+
+    void updatestart();
 }

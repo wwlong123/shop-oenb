@@ -3,7 +3,6 @@ package com.jk.model;
 import java.io.Serializable;
 
 public class Users implements Serializable {
-
     private static final long serialVersionUID = 1451399989778697978L;
 
     private Integer userid;

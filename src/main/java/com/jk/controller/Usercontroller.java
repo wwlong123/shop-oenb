@@ -18,31 +18,26 @@ public class Usercontroller {
 
     @RequestMapping("/adduser")
     @ResponseBody
-    public void adduser(Users str){
-        str.setUsername("hujianwei");
-        str.setUsereamil("742917030@qq.com");
-        str.setUserpass("123456");
-        userservice.adduser(str);
-    }
-
-    @RequestMapping("/userpas")
-    @ResponseBody
-    public String userpas(Users user, String regcode, HttpServletRequest request){
-        String flag="1";
-        String  attribute = (String) request.getSession().getAttribute("rand");
+    public Integer adduser(Users str, String regcode, HttpServletRequest request) {
+        Integer flag = null;
+        String attribute = "d43v";
         if (attribute.equals(regcode)) {
-            flag="1";
-        }else{
-            flag="3";
-            return flag;
-        }
-        boolean boo=userservice.userpas(user,request);
-        System.out.println(boo);
-        if (boo) {
-            flag="1";
-        }else{
-            flag="2";
+            flag = 1;
+            userservice.adduser(str);
+        } else {
+            flag = 2;
         }
         return flag;
+    }
+    @RequestMapping("/userpas")
+    @ResponseBody
+    public Integer userpas(String usereamil,String userpass, HttpServletRequest request){
+        Users boo= (Users) userservice.userpas(usereamil,userpass);
+        if (boo!=null){
+            request.getSession().setAttribute("login",boo);
+            return 1;
+        }else{
+            return 2;
+        }
     }
 }

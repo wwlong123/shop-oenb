@@ -7,6 +7,5 @@ import javax.servlet.http.HttpServletRequest;
 public interface Userservice {
 
     void adduser(Users str);
-
-    boolean userpas(Users user, HttpServletRequest request);
+    Users userpas(String usereamil, String userpass);
 }
