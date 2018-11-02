@@ -62,24 +62,9 @@
             {field: 'parname', title: '合作人', width: 100, align: 'center'},
             {field: 'parcompany', title: '合作公司', width: 100, align: 'center'},
             {field: 'parrelation', title: '联系方式', width: 100, align: 'center'},
-            {
-                field: 'startdate', title: '开始时间', width: 100, align: 'center',
-                formatter: function (value, row, index) {//value 当前字段值  row当前行的数据  index当前行
-                    var simfomat = new Date();
-                    simfomat.setTime(value);   //转换时间
-                    return simfomat.toLocaleDateString();
-                }
-            },
-            {
-                field: 'enddate', title: '结束时间', width: 100, align: 'center',
-                formatter: function (value, row, index) {//value 当前字段值  row当前行的数据  index当前行
-                    var simfomat = new Date();
-                    simfomat.setTime(value);   //转换时间
-                    return simfomat.toLocaleDateString();
-                }
-            },
-            {
-                field: 'parstate', title: '合作关系', width: 100, align: 'center',
+            {field: 'startdate', title: '开始时间', width: 100, align: 'center'},
+            {field: 'enddate', title: '结束时间', width: 100, align: 'center'},
+            {field: 'parstate', title: '合作关系', width: 100, align: 'center',
                 formatter: function (value, row, index) {
                     return value == 1 ? "合作" : "解约合作";
                 }
