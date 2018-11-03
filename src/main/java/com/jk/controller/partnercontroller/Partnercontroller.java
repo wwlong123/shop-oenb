@@ -28,4 +28,10 @@ public class Partnercontroller {
     public void addpartner(Partner str){
         partnerservice.addpartner(str);
     }
+
+    @RequestMapping("/delpartner")
+    @ResponseBody
+    public void delpartner(Integer userid){
+        partnerservice.delpartner(userid);
+    }
 }

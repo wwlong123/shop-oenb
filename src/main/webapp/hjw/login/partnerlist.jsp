@@ -18,6 +18,7 @@
 <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/locale/easyui-lang-zh_CN.js"></script>
 <jsp:include page="/common/mystyle.jsp"></jsp:include>
 <body>
+<button type='button' class='btn btn-default btn-sm' onclick='tankuang()'>新  增</button>
 <table id="dg" class="table-responsive"></table>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -73,7 +74,7 @@
             {
                 field: 'caozuo', title: '操作', width: 100, align: 'center',
                 formatter: function (value, row, index) {
-                    arr = "<button type='button' class='btn btn-default btn-sm' onclick='tankuang()'>新  增</button>";
+                    arr = "<button type='button' class='btn btn-default btn-sm' onclick='delpartner("+row.id+")'>删  除</button>";
                     return arr;
                 }
             }
@@ -89,7 +90,20 @@
             type:"post",
             data:$("#form").serialize(),
             success:function(){
+                $('#dg').bootstrapTable('refresh');
                 alert("恭喜保存成功")
+            }
+        })
+    }
+
+    function delpartner(id) {
+        $.ajax({
+            url:"<%=request.getContextPath() %>/partner/delpartner",
+            type:"post",
+            data:{"userid":id},
+            success:function(){
+                $('#dg').bootstrapTable('refresh');
+                alert("恭喜删除成功")
             }
         })
     }

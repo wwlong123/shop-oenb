@@ -1,21 +1,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0024)http://www.zuidaima.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-  <meta name="description" content="最代码 www.zuidaima.com 最全面,最专业的源代码分享网站,近万名用户分享超过数万份高质量的java/jquery/bootstrap/html/css源代码" />
-  <title>登录-最代码</title>
-  <meta name="keywords" content="代码,代码分享,代码例子,源码,java代码，javascript代码,最代码,程序" />
-  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://adservice.google.com/adsid/integrator.js?domain=www.zuidaima.com" rel="preload" /> 
-  <link rel="stylesheet" type="text/css" href="index.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/default/easyui.css">
-  <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/icon.css">
-  <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.min.js"></script>
-  <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.easyui.min.js"></script>
-  <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/util-js.js"></script>
-  <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/locale/easyui-lang-zh_CN.js"></script>
- </head> 
- <body>
+<head>
+ <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta name="description" content="最代码 www.zuidaima.com 最全面,最专业的源代码分享网站,近万名用户分享超过数万份高质量的java/jquery/bootstrap/html/css源代码" />
+ <title>最代码-最全面，最专业的源代码分享网站</title>
+ <meta name="keywords" content="代码,代码分享,代码例子,源码,java代码，javascript代码,最代码,程序" />
+ <link href="http://www.zuidaima.com/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+ <link href="/indexjs/shCore-min.css" type="text/css" rel="stylesheet" />
+ <link href="/indexjs/bootstrap.min.css" rel="stylesheet" />
+ <link href="/indexjs/font-awesome.min.css" rel="stylesheet" />
+ <link href="/indexjs/zuidaima.css" rel="stylesheet" />
+ <script src="/indexjs/amp4ads-host-v0.js.下载"></script>
+ <script src="/indexjs/f.txt"></script>
+ <script src="/indexjs/f(1).txt"></script>
+ <script src="/indexjs/ca-pub-2303958443489176.js.下载"></script>
+ <script src="/indexjs/hm.js.下载"></script>
+ <script src="/indexjs/ckeditor.js.下载"></script>
+ <style>.cke{visibility:hidden;}</style>
+ <script src="/indexjs/jquery.1.10.2.min.js.下载"></script>
+ <script src="/indexjs/zuidaima.js.下载"></script>
+ <link rel="preload" href="/indexjs/f(2).txt" as="script" />
+ <script type="text/javascript" src="/indexjs/f(2).txt"></script>
+ <link rel="preload" href="http://pagead2.googlesyndication.com/pagead/js/r20181031/r20180604/show_ads_impl.js" as="script" />
+ <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/default/easyui.css">
+ <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/easyui/themes/icon.css">
+ <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.min.js"></script>
+ <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/jquery.easyui.min.js"></script>
+ <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/util-js.js"></script>
+ <script type="text/javascript" src="<%=request.getContextPath() %>/easyui/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body style="">
+<div class="header">
+ <div class="navbar navbar-expand-md navbar-dark navbar-fixed-top fixed-top">
+  <div class="container">
+   <a href="" title="最代码网站"><img src="/indexjs/logo.png"  /></a>
+   <div class="collapse navbar-collapse nav_wrap"> &nbsp&nbsp&nbsp&nbsp
+    <ul class="navbar-nav">
+     <li class="nav-item"><a id="nav_index" class="nav-link youarehere" href="http://www.zuidaima.com/">首页</a></li>
+     <li class="nav-item"><a id="nav_share" class="nav-link" href="http://www.zuidaima.com/share.htm">代码</a></li>
+     <li class="nav-item"><a id="nav_question" class="nav-link" href="http://www.zuidaima.com/question.htm">问答</a></li>
+     <li class="nav-item"><a id="nav_blog" class="nav-link" href="http://www.zuidaima.com/blog.htm">博客</a></li>
+     <li class="nav-item"><a id="nav_activity" class="nav-link" href="http://www.zuidaima.com/activity.htm">活动</a></li>
+     <li class="nav-item"><a id="nav_event" class="nav-link" href="http://www.zuidaima.com/event.htm">动态</a></li>
+     <li class="nav-item">
+      <div id="search_box">
+       <input type="text" id="search" placeholder="搜索您要的代码" value="搜索您要的代码" />
+       <a href="#" > 🔍 </a>
+      </div></li>
+    </ul>
+   </div>
+   <div class="collapse navbar-collapse nav_wrap justify-content-end">
+    <ul class="navbar-nav">
+     <li class="nav-item"><a href="<%=request.getContextPath() %>/hjw/qiantaidenglu/index.jsp" class="nav-link">登录</a></li>
+     <li class="nav-item"><a href="<%=request.getContextPath() %>/hjw/frontlogin/zhuce.jsp" class="nav-link">注册</a></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
   <div class="header"></div>
   <div class="main container margin_top10 width_998">
    <div class="data_list user">
@@ -52,7 +96,7 @@
                     alert(data)
                     //路径自己写   猪！！！！！！！！！！！！！
                     if (data==1){
-                        location.href = "abc.jsp";
+                        location.href = "/hjw/indexshou .jsp";
                     }else{
                         alert("代码错误")
                     }

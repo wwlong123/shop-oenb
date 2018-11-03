@@ -11,4 +11,6 @@ public interface Partnerservice {
     void addpartner(Partner str);
 
     void updatestart();
+
+    void delpartner(Integer userid);
 }
