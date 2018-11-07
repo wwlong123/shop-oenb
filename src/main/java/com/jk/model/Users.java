@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Users implements Serializable {
     private static final long serialVersionUID = 1451399989778697978L;
-
     private Integer userid;
 
     private String username;
@@ -12,6 +11,18 @@ public class Users implements Serializable {
     private String usereamil;
 
     private String userpass;
+
+    private String userimge;
+
+    private String usernb;
+
+    public String getUsernb() {
+        return usernb;
+    }
+
+    public void setUsernb(String usernb) {
+        this.usernb = usernb;
+    }
 
     public Integer getUserid() {
         return userid;
@@ -45,6 +56,14 @@ public class Users implements Serializable {
         this.userpass = userpass;
     }
 
+    public String getUserimge() {
+        return userimge;
+    }
+
+    public void setUserimge(String userimge) {
+        this.userimge = userimge;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
@@ -52,6 +71,7 @@ public class Users implements Serializable {
                 ", username='" + username + '\'' +
                 ", usereamil='" + usereamil + '\'' +
                 ", userpass='" + userpass + '\'' +
+                ", userimge='" + userimge + '\'' +
                 '}';
     }
 }

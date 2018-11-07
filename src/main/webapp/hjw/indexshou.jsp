@@ -39,6 +39,13 @@
                     <li class="nav-item"><a id="nav_blog" class="nav-link" href="http://www.zuidaima.com/blog.htm">博客</a></li>
                     <li class="nav-item"><a id="nav_activity" class="nav-link" href="http://www.zuidaima.com/activity.htm">活动</a></li>
                     <li class="nav-item"><a id="nav_event" class="nav-link" href="http://www.zuidaima.com/event.htm">动态</a></li>
+
+                    <li id="nav_buy" class="nav-item">
+                        <a class="nav-link"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal" href="javascript:void(0)" style="color:#FFFF00" rel="nofollow" title="购买牛币">购买</a>
+<%--
+                    <button class="btnbtn-primary btn-lg" data-toggle="modal" data-target="#Modal" style="align-content:center">购买</button>
+--%>
+                    </li>
                     <li class="nav-item">
                         <div id="search_box">
                             <input type="text" id="search" placeholder="搜索您要的代码" value="搜索您要的代码" />
@@ -46,41 +53,41 @@
                         </div></li>
                 </ul>
             </div>
-            <di class="collapse navbar-collapse nav_wrap justify-content-end">
+            <div class="collapse navbar-collapse nav_wrap justify-content-end">
                 <ul class="navbar-nav">
 
-                   <c:if test="${login.userid ==null}">
+                    <c:if test="${login.userid ==null}">
                         <li class="nav-item"><a href="<%=request.getContextPath() %>/hjw/qiantaidenglu/index.jsp" class="nav-link">登录</a></li>
                         <li class="nav-item"><a href="<%=request.getContextPath() %>/hjw/frontlogin/zhuce.jsp" class="nav-link">注册</a></li>
-                     </c:if>
+                    </c:if>
                     <c:if test="${login.userid != null}">
-                            <li class="nav-item dropdown my_box"><a href="javascript:void(0)" class="nav-link" data-toggle="dropdown" style="color:#FFFF00">发表</a>
+                        <li class="nav-item dropdown my_box"><a href="javascript:void(0)" class="nav-link" data-toggle="dropdown" style="color:#FFFF00">发表</a>
                             <div class="dropdown-menu">
-                            <a class="dropdown-item " href="http://www.zuidaima.com/share/create.htm">✍分享代码</a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/question/create.htm">☝提出问题</a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/blog/create.htm">♒编写博客</a>
+                                <a class="dropdown-item " href="http://www.zuidaima.com/share/create.htm">✍分享代码</a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/question/create.htm">☝提出问题</a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/blog/create.htm">♒编写博客</a>
                             </div></li>
-                            <li class="nav-item dropdown remind_box"><a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">♚<span class="remind_count" id="remind_count" style="display:none">0</span></a>
+                        <li class="nav-item dropdown remind_box"><a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">♚<span class="remind_count" id="remind_count" style="display:none">0</span></a>
                             <div class="dropdown-menu">
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_comment.htm">✉&nbsp收到评论<span class="remind_count" id="remind_count_1" style="display:none">0</span></a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/mention.htm">❤&nbsp提到我的<span class="remind_count" id="remind_count_2" style="display:none">0</span></a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_like_post.htm">☬&nbsp心情被赞<span class="remind_count" id="remind_count_3" style="display:none">0</span></a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_dislike_post.htm">☹  心情被踩<span class="remind_count" id="remind_count_4" style="display:none">0</span></a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/notification.htm">♞&nbsp系统通知<span class="remind_count" id="remind_count_6" style="display:none">0</span></a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_comment.htm">✉&nbsp收到评论<span class="remind_count" id="remind_count_1" style="display:none">0</span></a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/mention.htm">❤&nbsp提到我的<span class="remind_count" id="remind_count_2" style="display:none">0</span></a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_like_post.htm">☬&nbsp心情被赞<span class="remind_count" id="remind_count_3" style="display:none">0</span></a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/receive_dislike_post.htm">☹  心情被踩<span class="remind_count" id="remind_count_4" style="display:none">0</span></a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/notification.htm">♞&nbsp系统通知<span class="remind_count" id="remind_count_6" style="display:none">0</span></a>
                             </div></li>
-                            <li class="nav-item dropdown my_box">
+                        <li class="nav-item dropdown my_box">
                             <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
-                            <img class="user_header_32X32" src="./indexjs/default_avatar.png" /></a>
+                                <img class="user_header_32X32" src="${login.userimge}" /></a>
                             <div class="dropdown-menu">
-                            <b class="dropdown-item font-weight-bold">共有0牛币</b>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/4129825495697408.htm">☬&nbsp个人主页</a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/withdraw.htm">♝&nbsp我的后台</a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/update.htm">☸&nbsp设置资料</a>
-                            <a class="dropdown-item" href="http://www.zuidaima.com/user/logout.htm">☭&nbsp退出系统</a>
+                                <b class="dropdown-item font-weight-bold">共有${login.usernb}牛币</b>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/4129825495697408.htm">☬&nbsp个人主页</a>
+                                <a class="dropdown-item" href="updateUser.jsp">♝&nbsp我的后台</a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/update.htm">☸&nbsp设置资料</a>
+                                <a class="dropdown-item" href="http://www.zuidaima.com/user/logout.htm">☭&nbsp退出系统</a>
                             </div></li>
                     </c:if>
                 </ul>
-            </di>
+            </div>
         </div>
     </div>
 </div>
@@ -385,6 +392,60 @@
         <script>var _hmt = _hmt || [];    (function() {        var hm = document.createElement("script");        hm.src = "//hm.baidu.com/hm.js?500f123d596f6dae47e36a9a36fed240";        var s = document.getElementsByTagName("script")[0];        s.parentNode.insertBefore(hm, s);    })();</script>
         <iframe id="google_osd_static_frame_4638083256042" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="/indexjs/saved_resource(4).html"></iframe>
         <iframe id="google_shimpl" style="display: none;" src="/indexjs/saved_resource(5).html"></iframe>
+
+        <%--一级管理表单--%>
+        <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formid">
+                            <div class="form-group">
+                                <label for="name">请输入购买金额</label>
+                                <input type="text" class="form-control" name="jiaqian" id="zname" placeholder="请输入金额">
+                                <input type="hidden" name="userid" value="${login.userid}" id="userid"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" onclick="jiaqian()">购买</button>
+                    </div>
+
+                    <div class="fee-info" style="margin-top: 10px;">
+                        <center><h1><font color="red" size="7px">金额：10元,所得牛币:100</font></h1></center>
+                    </div>
+
+
+                    <div class="alert alert-danger" style="margin-bottom: 10px;">
+                        支付宝客服工作时间周一到周五9：00-21：30,节假日休息无法即时到账请谅解!<br>
+                        <strong>警告！</strong>支付宝支付请提供最代码帐号(邮箱，用户名，ID均可),否则无法充值,<b>优先推荐使用支付宝扫码支付</b>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                最全面，最专业的源码服务
+            </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+        <script type="application/x-javascript">
+            function jiaqian(){
+                alert("😀祝您访问愉快😀")
+                location.href="/user/goAlipay?jiaqian="+$("#zname").val()
+                /*$.ajax({
+                    url:"/user/goAlipay",
+                    type:"post",
+                    data:{"jiaqian":$("#zname").val(),"userid":$("#userid").val()},
+                    success:function(data){
+                    }
+                })*/
+            }
+
+        </script>
 
 </body>
 </html>

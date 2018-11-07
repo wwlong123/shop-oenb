@@ -49,8 +49,9 @@
 </div>
 <script type="text/javascript">
     function loginUser() {
+        alert("ss")
         $.ajax({
-            url: "<%=request.getContextPath() %>/login/selectuser",
+            url: "/login/selectuser",
             type: "post",
             data: $("#formid").serialize(),
             success: function(data){

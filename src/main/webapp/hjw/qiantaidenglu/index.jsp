@@ -76,7 +76,7 @@
      </div>
      <div class="margin_top10">
       密&nbsp;&nbsp;&nbsp;码:
-      <input name="userpass" id="password" data_name="密码" placeholder="密码" value="" class="form-control col-6" type="password" />
+      <input name="userpass" data_name="密码" placeholder="密码" value="" class="form-control col-6" type="password" />
      </div>
      <div class="margin_top10">
       <label class="form-check-label"><input id="rememberme" name="rememberme" checked="checked" type="checkbox" />记住我</label>
@@ -94,9 +94,8 @@
                 data: $("#formids").serialize(),
                 success: function(data){
                     alert(data)
-                    //路径自己写   猪！！！！！！！！！！！！！
                     if (data==1){
-                        location.href = "/hjw/indexshou .jsp";
+                        location.href = "../indexshou.jsp";
                     }else{
                         alert("代码错误")
                     }
